@@ -18,7 +18,7 @@ const main = () => {
             let response = JSON.parse(res);
 
             // 保存数据
-            saveData(item, response.result.data);
+            saveData(item, Array.from(new Set(response.result.data)));
         });
     })
 }
